@@ -3,12 +3,11 @@ package main
 import (
 	"fmt"
 
-	dice "github.com/conorkenn/dnd_go_adventure/pkg"
+	"github.com/conorkenn/dnd_go_adventure/internal/pkg/alignment"
 )
 
 func main() {
-	dice := dice.D100
-
-	result := dice.Roll()
-	fmt.Print(result)
+	a, _ := alignment.GetAlignments("CE")
+	fmt.Println(a.Name())
+	fmt.Println(a.Description())
 }
